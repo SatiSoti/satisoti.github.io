@@ -1,0 +1,1686 @@
+{
+  "format": "comic-hatten.general-character-pack",
+  "schemaVersion": "1.0.0",
+  "packId": "comic-hatten-general",
+  "version": "1.2.0",
+  "releasedAt": "2026-10-13",
+  "locale": "ja-JP",
+  "title": "コミック発展国 一般キャラ素材セット",
+  "assets": [
+    {
+      "id": "heads",
+      "image": "assets/heads.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2e7f82f2e64f7f22517230f58e79455f5288a263c2058686af8a4f5193d61880"
+    },
+    {
+      "id": "faces",
+      "image": "assets/faces.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3a6143d913f2b3c3c1f5d12872ec4474b2b46eb522af9619b8e91e1223e107b3"
+    },
+    {
+      "id": "casual",
+      "image": "assets/casual.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ba6acf0eac0607b435274656b32f0c2027bf856e7a396cb7a95af68c96613b07"
+    },
+    {
+      "id": "jacket",
+      "image": "assets/jacket.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "d588b19528e775be4beb3952ffe66ceff7d8085420c0b1bc42ebe32b405fdb4d"
+    },
+    {
+      "id": "apron",
+      "image": "assets/apron.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7a2acf4d85a8f5fcc5cb1d618b4a74bcf5ce672d13fb9ac077bfc0b6991f553b"
+    },
+    {
+      "id": "age-heads",
+      "image": "assets/age-heads.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8ade08d255f69c570af9f5d3129a4e7d5eec880117c2de5a156bba1a7d1d14c9"
+    },
+    {
+      "id": "age-faces",
+      "image": "assets/age-faces.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2cb8ca5cbd9da1f7f9318e3bbdd1276750480cf4816d10296e1ad18621e6376d"
+    },
+    {
+      "id": "women-casual",
+      "image": "assets/women-casual.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ca1cc00a1ab289e6b826c2fd306ec5d068490ad18d4432008669007094a55c3d"
+    },
+    {
+      "id": "women-jacket",
+      "image": "assets/women-jacket.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "218b3002c29fb28fad1576ea173b0da6767eeddb2047154c4ebd46923e775230"
+    },
+    {
+      "id": "women-apron",
+      "image": "assets/women-apron.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "049cf379d2062a38f7b22d599a8aa074efce7d67eea14625eba5c5847f206e36"
+    }
+  ],
+  "parts": {
+    "hair": [
+      {
+        "id": "short",
+        "label": "ふわっとショート",
+        "assetId": "heads",
+        "rect": [
+          16,
+          18,
+          463,
+          467
+        ],
+        "neck": [
+          231,
+          466
+        ],
+        "faceBox": [
+          200,
+          241,
+          187,
+          170
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "bob",
+        "label": "丸いボブ",
+        "assetId": "heads",
+        "rect": [
+          529,
+          43,
+          469,
+          442
+        ],
+        "neck": [
+          241,
+          441
+        ],
+        "faceBox": [
+          204,
+          212,
+          187,
+          173
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "female"
+        ]
+      },
+      {
+        "id": "ponytail",
+        "label": "ポニーテール",
+        "assetId": "heads",
+        "rect": [
+          1030,
+          13,
+          492,
+          499
+        ],
+        "neck": [
+          290,
+          471
+        ],
+        "faceBox": [
+          261,
+          245,
+          176,
+          171
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "female"
+        ]
+      },
+      {
+        "id": "wavy",
+        "label": "ゆるウェーブ",
+        "assetId": "heads",
+        "rect": [
+          15,
+          524,
+          500,
+          466
+        ],
+        "neck": [
+          244,
+          451
+        ],
+        "faceBox": [
+          223,
+          246,
+          169,
+          155
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "female"
+        ]
+      },
+      {
+        "id": "center",
+        "label": "センター分け",
+        "assetId": "heads",
+        "rect": [
+          554,
+          536,
+          461,
+          441
+        ],
+        "neck": [
+          223,
+          441
+        ],
+        "faceBox": [
+          207,
+          248,
+          162,
+          145
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "crop",
+        "label": "すっきりショート",
+        "assetId": "heads",
+        "rect": [
+          1100,
+          530,
+          413,
+          447
+        ],
+        "neck": [
+          222,
+          447
+        ],
+        "faceBox": [
+          165,
+          224,
+          184,
+          171
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "adult_buzz",
+        "label": "すっきり刈り上げ",
+        "assetId": "age-heads",
+        "rect": [
+          74,
+          41,
+          375,
+          422
+        ],
+        "neck": [
+          176,
+          419
+        ],
+        "faceBox": [
+          167,
+          179,
+          181,
+          190
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "adult_part",
+        "label": "大人の七三分け",
+        "assetId": "age-heads",
+        "rect": [
+          576,
+          41,
+          406,
+          422
+        ],
+        "neck": [
+          186,
+          419
+        ],
+        "faceBox": [
+          175,
+          179,
+          175,
+          192
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "mature_short",
+        "label": "後退した短髪",
+        "assetId": "age-heads",
+        "rect": [
+          1096,
+          44,
+          377,
+          419
+        ],
+        "neck": [
+          184,
+          416
+        ],
+        "faceBox": [
+          178,
+          172,
+          180,
+          199
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "mature_perm",
+        "label": "ふんわりパーマ",
+        "assetId": "age-heads",
+        "rect": [
+          35,
+          533,
+          445,
+          425
+        ],
+        "neck": [
+          214,
+          422
+        ],
+        "faceBox": [
+          197,
+          194,
+          183,
+          194
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "female"
+        ]
+      },
+      {
+        "id": "senior_sparse",
+        "label": "薄毛・シニア",
+        "assetId": "age-heads",
+        "rect": [
+          582,
+          536,
+          385,
+          420
+        ],
+        "neck": [
+          185,
+          419
+        ],
+        "faceBox": [
+          170,
+          180,
+          192,
+          206
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "senior_bun",
+        "label": "まとめ髪・シニア",
+        "assetId": "age-heads",
+        "rect": [
+          1071,
+          534,
+          425,
+          425
+        ],
+        "neck": [
+          217,
+          423
+        ],
+        "faceBox": [
+          209,
+          205,
+          176,
+          178
+        ],
+        "renderNeckHeight": 32,
+        "styles": [
+          "female"
+        ]
+      }
+    ],
+    "face": [
+      {
+        "id": "bright",
+        "label": "ぱっちり",
+        "assetId": "faces",
+        "rect": [
+          205,
+          142,
+          420,
+          316
+        ],
+        "styles": [
+          "male",
+          "female"
+        ]
+      },
+      {
+        "id": "gentle",
+        "label": "おだやか",
+        "assetId": "faces",
+        "rect": [
+          932,
+          171,
+          425,
+          292
+        ],
+        "styles": [
+          "male",
+          "female"
+        ]
+      },
+      {
+        "id": "sharp",
+        "label": "きりっと",
+        "assetId": "faces",
+        "rect": [
+          193,
+          646,
+          439,
+          268
+        ],
+        "styles": [
+          "male",
+          "female"
+        ]
+      },
+      {
+        "id": "smile",
+        "label": "にこにこ",
+        "assetId": "faces",
+        "rect": [
+          932,
+          642,
+          438,
+          301
+        ],
+        "styles": [
+          "male",
+          "female"
+        ]
+      },
+      {
+        "id": "adult_calm",
+        "label": "落ち着いた男性",
+        "assetId": "age-faces",
+        "rect": [
+          94,
+          130,
+          371,
+          318
+        ],
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "adult_bold",
+        "label": "きりっと男性",
+        "assetId": "age-faces",
+        "rect": [
+          598,
+          118,
+          363,
+          330
+        ],
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "mature_moustache",
+        "label": "口ひげ・中年",
+        "assetId": "age-faces",
+        "rect": [
+          1073,
+          132,
+          386,
+          327
+        ],
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "mature_soft",
+        "label": "大人の微笑み",
+        "assetId": "age-faces",
+        "rect": [
+          87,
+          612,
+          384,
+          325
+        ],
+        "styles": [
+          "female"
+        ]
+      },
+      {
+        "id": "senior_kind",
+        "label": "年輪の笑顔",
+        "assetId": "age-faces",
+        "rect": [
+          579,
+          560,
+          388,
+          387
+        ],
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "senior_glasses",
+        "label": "丸眼鏡・シニア",
+        "assetId": "age-faces",
+        "rect": [
+          1086,
+          617,
+          411,
+          325
+        ],
+        "styles": [
+          "female"
+        ]
+      }
+    ],
+    "outfit": [
+      {
+        "id": "casual",
+        "label": "ポケットシャツ",
+        "assetId": "casual",
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              128,
+              79,
+              218,
+              387
+            ],
+            "neck": [
+              105.76,
+              33.69
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              455,
+              79,
+              280,
+              392
+            ],
+            "neck": [
+              143.11,
+              34.03
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              806,
+              79,
+              273,
+              387
+            ],
+            "neck": [
+              152.5,
+              33.69
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1177,
+              83,
+              277,
+              388
+            ],
+            "neck": [
+              138.32,
+              33.76
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              83,
+              534,
+              284,
+              407
+            ],
+            "neck": [
+              151.78,
+              35.07
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              503,
+              574,
+              220,
+              367
+            ],
+            "neck": [
+              111.7,
+              36.23
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              846,
+              577,
+              228,
+              368
+            ],
+            "neck": [
+              112.41,
+              36.31
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1191,
+              554,
+              252,
+              392
+            ],
+            "neck": [
+              133.18,
+              34.03
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          }
+        ],
+        "assemblyFlipX": true,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "jacket",
+        "label": "ジャケット",
+        "assetId": "jacket",
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              94,
+              90,
+              223,
+              379
+            ],
+            "neck": [
+              117.5,
+              33.14
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              462,
+              92,
+              265,
+              378
+            ],
+            "neck": [
+              126.38,
+              33.07
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              837,
+              91,
+              274,
+              378
+            ],
+            "neck": [
+              134.5,
+              33.07
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1224,
+              92,
+              269,
+              382
+            ],
+            "neck": [
+              131.95,
+              33.34
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              76,
+              567,
+              283,
+              388
+            ],
+            "neck": [
+              132.93,
+              33.76
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              489,
+              609,
+              214,
+              336
+            ],
+            "neck": [
+              98.89,
+              33.85
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              869,
+              609,
+              212,
+              336
+            ],
+            "neck": [
+              100.5,
+              32.85
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1212,
+              571,
+              255,
+              374
+            ],
+            "neck": [
+              127.0,
+              32.79
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          }
+        ],
+        "assemblyFlipX": false,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "apron",
+        "label": "作業エプロン",
+        "assetId": "apron",
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              91,
+              88,
+              223,
+              390
+            ],
+            "neck": [
+              114.5,
+              33.9
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              459,
+              88,
+              261,
+              391
+            ],
+            "neck": [
+              126.5,
+              33.97
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              812,
+              87,
+              292,
+              391
+            ],
+            "neck": [
+              143.0,
+              33.97
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1200,
+              88,
+              280,
+              393
+            ],
+            "neck": [
+              137.0,
+              34.1
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              63,
+              560,
+              288,
+              397
+            ],
+            "neck": [
+              139.5,
+              33.38
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              468,
+              621,
+              244,
+              335
+            ],
+            "neck": [
+              109.5,
+              32.77
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              852,
+              621,
+              242,
+              331
+            ],
+            "neck": [
+              109.5,
+              32.46
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1203,
+              549,
+              271,
+              411
+            ],
+            "neck": [
+              134.0,
+              34.34
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          }
+        ],
+        "assemblyFlipX": false,
+        "styles": [
+          "male"
+        ]
+      },
+      {
+        "id": "women_casual",
+        "label": "ブラウス＋パンツ",
+        "assetId": "women-casual",
+        "assemblyFlipX": false,
+        "styles": [
+          "female"
+        ],
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              113,
+              51,
+              198,
+              427
+            ],
+            "neck": [
+              96.5,
+              34.45
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              469,
+              51,
+              265,
+              423
+            ],
+            "neck": [
+              122.0,
+              34.17
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              833,
+              52,
+              234,
+              422
+            ],
+            "neck": [
+              116.5,
+              35.1
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1210,
+              55,
+              269,
+              414
+            ],
+            "neck": [
+              122.5,
+              33.55
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              80,
+              553,
+              244,
+              414
+            ],
+            "neck": [
+              122.82,
+              33.55
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              486,
+              571,
+              228,
+              390
+            ],
+            "neck": [
+              88.5,
+              35.0
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              852,
+              574,
+              224,
+              388
+            ],
+            "neck": [
+              84.5,
+              34.85
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1247,
+              546,
+              189,
+              432
+            ],
+            "neck": [
+              77.2,
+              35.79
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          }
+        ]
+      },
+      {
+        "id": "women_jacket",
+        "label": "ジャケット＋スカート",
+        "assetId": "women-jacket",
+        "assemblyFlipX": false,
+        "styles": [
+          "female"
+        ],
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              101,
+              33,
+              209,
+              451
+            ],
+            "neck": [
+              105.0,
+              36.1
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              452,
+              33,
+              280,
+              448
+            ],
+            "neck": [
+              126.0,
+              35.9
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              847,
+              33,
+              249,
+              446
+            ],
+            "neck": [
+              125.5,
+              35.76
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1226,
+              33,
+              272,
+              448
+            ],
+            "neck": [
+              132.5,
+              35.9
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              63,
+              543,
+              254,
+              447
+            ],
+            "neck": [
+              130.0,
+              35.83
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              480,
+              557,
+              211,
+              424
+            ],
+            "neck": [
+              82.0,
+              37.62
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              865,
+              557,
+              210,
+              424
+            ],
+            "neck": [
+              80.5,
+              37.62
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1244,
+              547,
+              238,
+              448
+            ],
+            "neck": [
+              109.0,
+              35.9
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          }
+        ]
+      },
+      {
+        "id": "women_apron",
+        "label": "エプロン＋スカート",
+        "assetId": "women-apron",
+        "assemblyFlipX": false,
+        "styles": [
+          "female"
+        ],
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              104,
+              33,
+              225,
+              424
+            ],
+            "neck": [
+              108.5,
+              35.24
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              462,
+              33,
+              260,
+              424
+            ],
+            "neck": [
+              121.5,
+              35.24
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              836,
+              33,
+              253,
+              424
+            ],
+            "neck": [
+              121.5,
+              35.24
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1221,
+              33,
+              267,
+              419
+            ],
+            "neck": [
+              119.5,
+              34.9
+            ],
+            "renderHeight": 29,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              85,
+              547,
+              239,
+              423
+            ],
+            "neck": [
+              117.0,
+              34.17
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              499,
+              565,
+              220,
+              395
+            ],
+            "neck": [
+              78.5,
+              36.38
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              872,
+              565,
+              217,
+              400
+            ],
+            "neck": [
+              83.0,
+              36.77
+            ],
+            "renderHeight": 26,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1244,
+              540,
+              211,
+              433
+            ],
+            "neck": [
+              96.0,
+              34.86
+            ],
+            "renderHeight": 29,
+            "offsetY": -1
+          }
+        ]
+      }
+    ]
+  },
+  "palettes": {
+    "hair": [
+      {
+        "id": "dark",
+        "label": "墨色",
+        "color": "#3f3d46"
+      },
+      {
+        "id": "brown",
+        "label": "栗色",
+        "color": "#80553f"
+      },
+      {
+        "id": "copper",
+        "label": "赤茶",
+        "color": "#b47248"
+      },
+      {
+        "id": "silver",
+        "label": "銀色",
+        "color": "#aaa9a4"
+      }
+    ],
+    "outfit": [
+      {
+        "id": "sage",
+        "label": "セージ",
+        "color": "#64866e"
+      },
+      {
+        "id": "coral",
+        "label": "コーラル",
+        "color": "#cc7061"
+      },
+      {
+        "id": "indigo",
+        "label": "インディゴ",
+        "color": "#6879aa"
+      },
+      {
+        "id": "mustard",
+        "label": "マスタード",
+        "color": "#c6974b"
+      },
+      {
+        "id": "plum",
+        "label": "プラム",
+        "color": "#a17198"
+      },
+      {
+        "id": "teal",
+        "label": "ティール",
+        "color": "#518e93"
+      }
+    ]
+  },
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ],
+      "fps": 1,
+      "loop": true
+    },
+    "walk": {
+      "frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "fps": 6,
+      "loop": true
+    },
+    "work": {
+      "frames": [
+        5,
+        6
+      ],
+      "fps": 2.7,
+      "loop": true
+    },
+    "cheer": {
+      "frames": [
+        0,
+        7
+      ],
+      "fps": 2.3,
+      "loop": true
+    }
+  },
+  "presets": [
+    {
+      "id": "general_naoto",
+      "name": "田島 直人",
+      "role": "artist",
+      "appearance": {
+        "hairId": "adult_buzz",
+        "faceId": "adult_calm",
+        "outfitId": "casual",
+        "hairColorId": "dark",
+        "outfitColorId": "indigo"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    },
+    {
+      "id": "general_ken",
+      "name": "三浦 健",
+      "role": "editor",
+      "appearance": {
+        "hairId": "adult_part",
+        "faceId": "adult_bold",
+        "outfitId": "jacket",
+        "hairColorId": "brown",
+        "outfitColorId": "teal"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    },
+    {
+      "id": "general_shigeru",
+      "name": "松岡 茂",
+      "role": "artist",
+      "appearance": {
+        "hairId": "mature_short",
+        "faceId": "mature_moustache",
+        "outfitId": "apron",
+        "hairColorId": "brown",
+        "outfitColorId": "mustard"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    },
+    {
+      "id": "general_yoko",
+      "name": "野沢 洋子",
+      "role": "editor",
+      "appearance": {
+        "hairId": "mature_perm",
+        "faceId": "mature_soft",
+        "outfitId": "women_jacket",
+        "hairColorId": "brown",
+        "outfitColorId": "coral"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "female"
+    },
+    {
+      "id": "general_gen",
+      "name": "大原 源",
+      "role": "artist",
+      "appearance": {
+        "hairId": "senior_sparse",
+        "faceId": "senior_kind",
+        "outfitId": "casual",
+        "hairColorId": "silver",
+        "outfitColorId": "sage"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    },
+    {
+      "id": "general_fumie",
+      "name": "小森 文江",
+      "role": "editor",
+      "appearance": {
+        "hairId": "senior_bun",
+        "faceId": "senior_glasses",
+        "outfitId": "women_apron",
+        "hairColorId": "silver",
+        "outfitColorId": "plum"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "female"
+    },
+    {
+      "id": "general_aoki",
+      "name": "青木 はじめ",
+      "role": "artist",
+      "appearance": {
+        "hairId": "short",
+        "faceId": "bright",
+        "outfitId": "casual",
+        "hairColorId": "dark",
+        "outfitColorId": "sage"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    },
+    {
+      "id": "general_koharu",
+      "name": "小春 つむぎ",
+      "role": "artist",
+      "appearance": {
+        "hairId": "bob",
+        "faceId": "smile",
+        "outfitId": "women_apron",
+        "hairColorId": "brown",
+        "outfitColorId": "coral"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "female"
+    },
+    {
+      "id": "general_ren",
+      "name": "水瀬 蓮",
+      "role": "artist",
+      "appearance": {
+        "hairId": "center",
+        "faceId": "sharp",
+        "outfitId": "casual",
+        "hairColorId": "silver",
+        "outfitColorId": "indigo"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    },
+    {
+      "id": "general_mao",
+      "name": "七瀬 真央",
+      "role": "artist",
+      "appearance": {
+        "hairId": "ponytail",
+        "faceId": "gentle",
+        "outfitId": "women_apron",
+        "hairColorId": "copper",
+        "outfitColorId": "mustard"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "female"
+    },
+    {
+      "id": "general_fumi",
+      "name": "白石 文",
+      "role": "editor",
+      "appearance": {
+        "hairId": "wavy",
+        "faceId": "gentle",
+        "outfitId": "women_jacket",
+        "hairColorId": "brown",
+        "outfitColorId": "plum"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "female"
+    },
+    {
+      "id": "general_nao",
+      "name": "佐伯 直",
+      "role": "editor",
+      "appearance": {
+        "hairId": "crop",
+        "faceId": "sharp",
+        "outfitId": "jacket",
+        "hairColorId": "dark",
+        "outfitColorId": "teal"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    },
+    {
+      "id": "general_kaoru",
+      "name": "森野 薫",
+      "role": "editor",
+      "appearance": {
+        "hairId": "bob",
+        "faceId": "bright",
+        "outfitId": "women_casual",
+        "hairColorId": "silver",
+        "outfitColorId": "sage"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "female"
+    },
+    {
+      "id": "general_kanade",
+      "name": "高原 奏",
+      "role": "editor",
+      "appearance": {
+        "hairId": "short",
+        "faceId": "smile",
+        "outfitId": "jacket",
+        "hairColorId": "copper",
+        "outfitColorId": "indigo"
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "styleGroup": "male"
+    }
+  ],
+  "rendering": {
+    "defaultDirection": "front-right",
+    "supportsHorizontalFlip": true,
+    "feetAnchor": true,
+    "logicalHeight": 62,
+    "coloring": "sentinel-mask",
+    "faceFeatures": "bundled-eyes-nose-mouth"
+  }
+}

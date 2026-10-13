@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9">
+  <title>一般キャラ・描画サンプル｜コミック発展国</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif; color: #34382f; background: #f5f2e9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 36px 20px; }
+    main { max-width: 760px; margin: auto; }
+    .eyebrow { color: #67795b; font-size: 11px; font-weight: 750; letter-spacing: .14em; }
+    h1 { font-size: clamp(25px, 5vw, 36px); line-height: 1.4; margin: 12px 0; }
+    p { line-height: 1.8; }
+    .intro { color: #666b5f; margin-bottom: 28px; }
+    .example { display: grid; grid-template-columns: minmax(0, 1fr) minmax(210px, .9fr); border: 1px solid #dedfd1; border-radius: 20px; overflow: hidden; background: #fffef8; }
+    .stage { display: grid; align-content: center; text-align: center; background: #e8eadd; padding: 20px 10px; min-width: 0; }
+    canvas { display: block; width: 100%; max-width: 320px; height: auto; margin: auto; image-rendering: pixelated; }
+    #character-name { font-weight: 700; margin: 4px 0 0; }
+    #character-role { color: #65715b; font-size: 13px; margin: 4px 0; }
+    .controls { padding: 26px 22px; }
+    .field { display: block; margin: 0 0 18px; font-size: 13px; font-weight: 650; }
+    select { display: block; width: 100%; margin-top: 7px; font: inherit; padding: 10px 9px; border: 1px solid #ced3c3; border-radius: 8px; background: white; color: inherit; }
+    button { font: inherit; padding: 10px 13px; border: 1px solid #536c50; border-radius: 8px; background: #536c50; color: white; cursor: pointer; }
+    button:disabled, select:disabled, input:disabled { cursor: wait; opacity: .5; }
+    button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid #b97749; outline-offset: 3px; }
+    .flip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; margin: 16px 0; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    #randomize { background: transparent; color: #536c50; }
+    #status { color: #68785b; font-size: 13px; margin-bottom: 0; }
+    #error { color: #963f37; background: #fff1e9; border: 1px solid #e5bcac; border-radius: 9px; padding: 12px 16px; }
+    [hidden] { display: none !important; }
+    h2 { font-size: 17px; margin-top: 30px; }
+    pre { background: #eceee3; border: 1px solid #dadfcf; border-radius: 12px; padding: 18px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; line-height: 1.65; }
+    .note { font-size: 12px; color: #73776b; }
+    @media (max-width: 580px) { .example { grid-template-columns: 1fr; } .controls { padding: 20px; } body { padding: 24px 16px; } }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+  </style>
+  <script type="module" src="example.mjs"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">COMIC HATTEN · GENERAL CHARACTER PACK v1.2.0</p>
+    <h1>組み合わせで生まれる、<br>小さな編集部の仲間。</h1>
+    <p class="intro">男性向け4,032通り・女性向け2,160通り。おまかせは直前に選んだサンプルの分類を使います。<br><strong id="combination-count">6,192</strong> 通りの見た目を、同じ描画モジュールで動かせます。</p>
+    <p id="error" role="alert" hidden></p>
+    <section class="example" aria-label="一般キャラクターの描画サンプル">
+      <div class="stage">
+        <canvas id="preview" width="320" height="320" aria-label="選択したキャラクターの動作"></canvas>
+        <p id="character-name">読み込み中…</p>
+        <p id="character-role"></p>
+      </div>
+      <div class="controls">
+        <label class="field" for="preset">サンプルの人物<select id="preset" disabled></select></label>
+        <label class="field" for="action">動作<select id="action" disabled><option value="idle">待つ</option><option value="walk" selected>歩く</option><option value="work">仕事</option><option value="cheer">喜ぶ</option></select></label>
+        <label class="flip"><input id="flip" type="checkbox" disabled>左右反転</label>
+        <div class="actions"><button id="play" type="button" aria-pressed="false" disabled>一時停止</button><button id="randomize" type="button" disabled>おまかせで組み合わせる</button></div>
+        <p id="status" role="status" aria-live="polite">パーツ画像を読み込んでいます。</p>
+      </div>
+    </section>
+    <h2>保存する見た目のデータ</h2>
+    <pre id="appearance">読み込み中…</pre>
+    <p class="note">人物を生成したときにこの設定を保存し、ゲームのロード時に復元します。能力値・登場条件はゲーム本体が管理します。</p>
+    <p class="note">このサンプルは素材パックだけで動作します。フォルダー全体を HTTP / HTTPS で配信してください。使い方はパック直下の README.md と AI-HANDOFF.md に記載しています。</p>
+  </main>
+</body>
+</html>

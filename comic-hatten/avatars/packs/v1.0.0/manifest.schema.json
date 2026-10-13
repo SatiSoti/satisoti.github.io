@@ -1,0 +1,438 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Comic Hatten Character Pack",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "comic-hatten.character-pack"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "packId": {
+      "const": "comic-hatten-specialists"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "releasedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "locale": {
+      "const": "ja-JP"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nameReading": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "enum": [
+              "artist",
+              "editor"
+            ]
+          },
+          "roleLabel": {
+            "enum": [
+              "漫画家",
+              "編集者"
+            ]
+          },
+          "epithet": {
+            "type": "string",
+            "minLength": 1
+          },
+          "profile": {
+            "type": "string",
+            "minLength": 1
+          },
+          "specialties": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "personality": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "design": {
+            "type": "object",
+            "properties": {
+              "fixed": {
+                "const": true
+              },
+              "signatureColor": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "markers": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "fixed",
+              "signatureColor",
+              "markers",
+              "notes"
+            ],
+            "additionalProperties": false
+          },
+          "production": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "const": "ready"
+              },
+              "revision": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "status",
+              "revision"
+            ],
+            "additionalProperties": false
+          },
+          "gameplay": {
+            "type": "object",
+            "properties": {
+              "stats": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": {
+                  "type": "number"
+                }
+              },
+              "unlockConditions": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "recruitmentCost": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "implementationStatus": {
+                "enum": [
+                  "not_integrated",
+                  "integrated"
+                ]
+              }
+            },
+            "required": [
+              "stats",
+              "unlockConditions",
+              "recruitmentCost",
+              "implementationStatus"
+            ],
+            "additionalProperties": false
+          },
+          "sprite": {
+            "type": "object",
+            "properties": {
+              "image": {
+                "type": "string",
+                "pattern": "^assets/[a-z0-9_-]+\\.png$"
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "grid": {
+                "type": "object",
+                "properties": {
+                  "columns": {
+                    "const": 4
+                  },
+                  "rows": {
+                    "const": 2
+                  },
+                  "cellWidth": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "cellHeight": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "columns",
+                  "rows",
+                  "cellWidth",
+                  "cellHeight"
+                ],
+                "additionalProperties": false
+              },
+              "frames": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "index": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 7
+                    },
+                    "rect": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "anchor": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "renderHeight": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "offsetY": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "index",
+                    "rect",
+                    "anchor",
+                    "renderHeight",
+                    "offsetY"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 8,
+                "maxItems": 8
+              },
+              "animations": {
+                "type": "object",
+                "properties": {
+                  "idle": {
+                    "type": "object",
+                    "properties": {
+                      "frames": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 7
+                        },
+                        "minItems": 1
+                      },
+                      "fps": {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      "loop": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "frames",
+                      "fps",
+                      "loop"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "walk": {
+                    "type": "object",
+                    "properties": {
+                      "frames": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 7
+                        },
+                        "minItems": 1
+                      },
+                      "fps": {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      "loop": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "frames",
+                      "fps",
+                      "loop"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "work": {
+                    "type": "object",
+                    "properties": {
+                      "frames": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 7
+                        },
+                        "minItems": 1
+                      },
+                      "fps": {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      "loop": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "frames",
+                      "fps",
+                      "loop"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "cheer": {
+                    "type": "object",
+                    "properties": {
+                      "frames": {
+                        "type": "array",
+                        "items": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 7
+                        },
+                        "minItems": 1
+                      },
+                      "fps": {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                      },
+                      "loop": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "frames",
+                      "fps",
+                      "loop"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "idle",
+                  "walk",
+                  "work",
+                  "cheer"
+                ],
+                "additionalProperties": false
+              },
+              "defaultDirection": {
+                "const": "front-right"
+              },
+              "supportsHorizontalFlip": {
+                "const": true
+              }
+            },
+            "required": [
+              "image",
+              "width",
+              "height",
+              "sha256",
+              "grid",
+              "frames",
+              "animations",
+              "defaultDirection",
+              "supportsHorizontalFlip"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "nameReading",
+          "role",
+          "roleLabel",
+          "epithet",
+          "profile",
+          "specialties",
+          "personality",
+          "design",
+          "production",
+          "gameplay",
+          "sprite"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "format",
+    "schemaVersion",
+    "packId",
+    "version",
+    "releasedAt",
+    "locale",
+    "title",
+    "characters"
+  ],
+  "additionalProperties": false
+}

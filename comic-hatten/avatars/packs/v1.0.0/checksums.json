@@ -1,0 +1,19 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "AI-HANDOFF.md": "ea8e451cbd22b2f435aaef924abf6833f65a7f2741d61efc3c14077f019e420b",
+    "CHANGELOG.md": "0826e4e0d0b928c68f4c327f646bd11c5916a7e49485a8db549f7b6e54136558",
+    "README.md": "658b8a4c36c706546a6598473704231c6df03e0d79de606c3b78b5da9dddc99a",
+    "assets/hanamori.png": "6738f330ad74d9e8b39ebfe0c759c9b44016e6ecc48aa19dcbd9b068b8d34f91",
+    "assets/hoshino.png": "6d9b95f674095d2ce87d37576b8eee1d103d6357930e2b71941832934d0804b4",
+    "assets/kazama.png": "d1d71fbea7cfae9183addde7f5bf7c1c90b4b6dd8672e474f54ad516d481e90c",
+    "assets/nukui.png": "fb152f47a3dcc3ac17505378139d4f79ae47d6e51badaf0a6b72465123a5cb33",
+    "assets/sumitani.png": "4c9f2294b85927a767b990ffeb5224d06a414c5c5524a89cdae8ee4e5847f844",
+    "assets/takamine.png": "34da7e20a6217fc4603dd53e5057e01b5f850ce0814031c9a98d060a4823733d",
+    "example/example.mjs": "a406b94583d39a31c8cbf0357480d51cf82d2d91c356215b3b76b939ff160e26",
+    "example/index.html": "98f2ffece31ffa450a8fa85f235b298ba486bd3cc08e5a02949d423e2a696256",
+    "manifest.json": "0c45b3d74ec5e4ccf701ae6e83bfb9c4aaefa60bf19ef9a603670fad04ae3bce",
+    "manifest.schema.json": "c24826d00edb9f4a1efd4c51b48a0220a257dda5e205c2c3a4f8f32e59ed3289",
+    "renderer.mjs": "7d818c38b85b14cb5cfb42bc20f46a961524afeed24451a9a27230a8c1fb243d"
+  }
+}

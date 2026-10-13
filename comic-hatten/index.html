@@ -308,7 +308,7 @@ pre.code{white-space:pre-wrap;word-break:break-all;font-size:11px;background:var
 #view .lazy:empty::before{content:'読み込み中…';color:var(--muted);font-size:12px}
 .koma.focus{outline:3px solid var(--accent);outline-offset:2px}
 
-</style></head><body>
+</style><link rel="stylesheet" href="avatars/avatars.css"></head><body>
 <div id="app" class="no-game">
   <header id="top" class="top koma" aria-label="会社の状況"></header>
   <nav id="nav" aria-label="画面の切り替え"></nav>
@@ -10585,6 +10585,8 @@ const C = CH.core;
 const V = CH.view = CH.view || {};
 const A = CH.act = CH.act || {};
 
+const avatarPortrait = (W, role, person, name, large) => CH.avatarUI ? CH.avatarUI.portrait(W, role, person, name, large) : '';
+
 // ------------------------------------------------------------------------------------------------ constants
 U.SAVE_PREFIX = 'comic-hatten-v2';
 U.SLOTS = ['auto', '1', '2'];
@@ -10979,13 +10981,13 @@ IDX.unread = (W) => { let u = 0, urgent = 0; for (const n of W.notifs) if (!n.ac
 IDX.pauseItems = (W) => (W.pause.reasons || []).map((k) => ({key: k, n: IDX.notif(W, k)}));
 IDX.stubs = (W) => Object.assign({}, W.__stubs || {});
 IDX.office = (W) => {                                              // office canvas data (display only, D-102)
-  const eds = IDX.editors(W).slice(0, 8).map((e) => ({id: e.id, busy: (e.load || 0) > 0 || e.n > 0, over: (e.overload || 0) > 0}));
+  const eds = IDX.editors(W).slice(0, 8).map((e) => ({id: e.id, avatar: CH.avatars ? CH.avatars.descriptor(W, 'editor', e.id) : null, busy: (e.load || 0) > 0 || e.n > 0, over: (e.overload || 0) > 0}));
   const auth = [];
   for (const s of IDX.series(W)) {
     if (!ACTIVE_SR.has(s.status)) continue;
     const a = W.authors[s.authorId]; if (!a) continue;
     const sr = W.series[s.id];
-    auth.push({id: a.id, mode: (a.pause && a.pause.until !== null && a.pause.until > W.tick) || s.status === 'hiatus' ? 'sleep' : a.F > 70 ? 'tired' : a.M < 35 ? 'slump' : 'draw',
+    auth.push({id: a.id, avatar: CH.avatars ? CH.avatars.descriptor(W, 'author', a.id) : null, mode: (a.pause && a.pause.until !== null && a.pause.until > W.tick) || s.status === 'hiatus' ? 'sleep' : a.F > 70 ? 'tired' : a.M < 35 ? 'slump' : 'draw',
       prog: sr.pages ? Math.min(1, sr.wipPages / sr.pages) : 0, srId: s.id});
   }
   let consult = 0; for (const c of IDX.cases(W)) if (c.open) consult++;
@@ -11331,8 +11333,8 @@ function pitchCardHtml(W, pc, o) {                                 // o.open: th
   o = o || {};
   const a = pc.author || {}, cb = pc.combo || {}, id = pc.id;
   const st = pc.status === 'improving' ? tag('改善中', 'blue') : pc.status === 'oneshot' ? tag('読み切り制作中', 'blue') : '';
-  let s = '<article class="koma card' + (o.focus ? ' focus' : '') + '" id="pc-' + esc(id) + '"><div class="row between"><h3>' + esc(a.name || '新人') + ' ' + (a.talent === 'gem' ? tag('逸材', 'hot') : '') + '</h3>'
-    + '<span class="row">' + (o.focus ? tag('相談画面から', 'gold') : '') + tag(ORIGIN_JA[pc.origin] || pc.origin, 'line') + st + (pc.sequelOf ? tag('続編', 'gold') : '') + '</span></div>';
+  let s = '<article class="koma card' + (o.focus ? ' focus' : '') + '" id="pc-' + esc(id) + '"><div class="row between"><div class="avatar-person-heading">' + avatarPortrait(W, 'pitch', id, a.name) + '<h3>' + esc(a.name || '新人') + ' ' + (a.talent === 'gem' ? tag('逸材', 'hot') : '') + '</h3>'
+    + '</div><span class="row">' + (o.focus ? tag('相談画面から', 'gold') : '') + tag(ORIGIN_JA[pc.origin] || pc.origin, 'line') + st + (pc.sequelOf ? tag('続編', 'gold') : '') + '</span></div>';
   s += '<div class="row"><span class="k">型</span> ' + esc(a.typeJa || TYPE_JA_DEF[a.type] || a.type || '—') + ' <span class="k">能力の目安</span> ' + skillHtml(a.skills)
     + ' <span class="k">意欲</span> <span class="num">' + (a.M && a.M.band !== undefined ? esc(a.M.band) : a.M && isNum(a.M.v) ? int(a.M.v) : '—') + '</span>'
     + ' <span class="k">独創性</span> ' + esc(a.originality || '—') + '</div>';
@@ -11386,7 +11388,7 @@ U.views.pitch = (W, p) => {
   const favs = new Set((IDX.pub(W) || {favorites: []}).favorites);
   const base = '#plan/pitch/' + pc.id, a = pc.author || {};
   let s = head('物語タイプ×題材を選ぶ', link('企画会議', '#plan') + ' › ' + esc(a.name || ''));
-  s += card('', '<div class="row"><span class="k">作者</span> <b>' + esc(a.name) + '</b> <span class="k">意欲</span> ' + (a.M && a.M.band !== undefined ? esc(a.M.band) : a.M && isNum(a.M.v) ? int(a.M.v) : '—')
+  s += card('', '<div class="row">' + avatarPortrait(W, 'pitch', pc.id, a.name) + '<span class="k">作者</span> <b>' + esc(a.name) + '</b> <span class="k">意欲</span> ' + (a.M && a.M.band !== undefined ? esc(a.M.band) : a.M && isNum(a.M.v) ? int(a.M.v) : '—')
     + ' <span class="k">独創性</span> ' + esc(a.originality || '—') + (a.wish ? ' <span class="k">作者の希望</span> ' + link(esc(comboName(a.wish.typeIdx, a.wish.themeIdx)), qs(base, {ti: a.wish.typeIdx, si: a.wish.themeIdx, cat})) : '') + '</div>'
     + '<p class="k">相性（★1〜5）は読者が最初に興味を持つ量だけに効きます。相性が良いだけで成功するわけではありません。売上の正確な予測は出しません。作者の希望から変えると、作者が同意しないことがあります。</p>');
   // selection detail
@@ -11981,7 +11983,7 @@ function offerForm(W, fid, offer) {
 }
 function authorCard(W, ap, o) {                                   // o.noName: the author screen already has the name as its heading (UX-12h)
   o = o || {};
-  const h3 = (extra) => (o.noName ? (extra ? '<div>' + extra + '</div>' : '<span></span>') : '<h3>' + link(esc(ap.name), '#author/' + ap.id) + (extra ? ' ' + extra : '') + '</h3>');
+  const h3 = (extra) => avatarPortrait(W, 'author', ap.id, ap.name) + (o.noName ? (extra ? '<div>' + extra + '</div>' : '<span></span>') : '<h3>' + link(esc(ap.name), '#author/' + ap.id) + (extra ? ' ' + extra : '') + '</h3>');
   if (ap.exact) {
     let s = '<article class="koma card"><div class="row between">' + h3(ap.talent === 'gem' ? tag('逸材', 'hot') : '') + tag(esc(ap.typeJa || ap.type), 'line') + '</div>';
     s += '<div class="row"><span class="k">能力</span> ' + skillHtml(ap.skill) + ' <span class="k">速度</span> <span class="num">' + int(ap.speed) + '</span></div>';
@@ -12190,11 +12192,11 @@ U.views.finance = (W) => {
   let er = eds.map((e) => {                                        // UX-06: the coming issue-week peak, last week's load, and the streak warning
     const pk = IDX.editorPeak(W, e.id), capTxt = isNum(e.cap) ? '/' + int(e.cap) : '';
     const warn = e.streak >= 4 ? tag('過負荷が' + int(e.streak) + '号続く・担当の見直しを', 'bad') : pk && pk.over ? tag('掲載週に過負荷', 'warn') : '';
-    return tr([[esc(e.name), 'l'], int(e.skill), int(e.n) + '/3', pk ? '<span class="' + (pk.over ? 'bad' : '') + '">' + int(pk.peak) + '/' + int(pk.cap) + '</span>' : '—', int(e.load) + capTxt, warn,
+    return tr([[avatarPortrait(W, 'editor', e.id, e.name) + esc(e.name), 'l'], int(e.skill), int(e.n) + '/3', pk ? '<span class="' + (pk.over ? 'bad' : '') + '">' + int(pk.peak) + '/' + int(pk.cap) + '</span>' : '—', int(e.load) + capTxt, warn,
       btn('解雇', 'fireEditor', {eId: e.id}, {cls: 'danger small', disabled: e.n > 0, confirm: e.name + 'を解雇しますか？（退職金4週分）'})]);
   });
   const pool = (helper('auth', 'hirePool') ? safe(() => CH.auth.hirePool(W, 'p0'), null) : null) || ((IDX.pub(W) || {}).hirePool) || [];
-  let hp = pool.map((c, i) => '<div><span>' + esc(c.name || '候補' + (i + 1)) + ' <small class="muted">能力 ' + int(c.skill) + ' · 得意 ' + esc((c.favTypes || []).map(typeName).join('・')) + '</small></span>'
+  let hp = pool.map((c, i) => '<div><span>' + avatarPortrait(W, 'candidate', c, c.name) + esc(c.name || '候補' + (i + 1)) + ' <small class="muted">能力 ' + int(c.skill) + ' · 得意 ' + esc((c.favTypes || []).map(typeName).join('・')) + '</small></span>'
     + btn('雇う', 'hireEditor', {index: i}, {cls: 'small', ok: '採用しました'}) + '</div>').join('');
   g += card('編集者（' + eds.length + '人）', table([['名前', 'l'], ['能力'], ['担当'], ['掲載週の負荷/上限'], ['先週の負荷'], [''], ['']], er) + loadNote(W) + '<div class="sub-h">採用候補（13週ごとに入れ替わり）</div><div class="lst">' + (hp || '<div class="muted">候補なし</div>') + '</div>', 'span2');
   // assistants
@@ -12533,7 +12535,7 @@ U.drawOffice = (cx, d, col, t, floaters) => {                      // cx: 2D con
   const nd = Math.max(1, Math.min(8, d.nEditors || d.editors.length));
   for (let i = 0; i < nd; i++) {
     const x = 10 + i * 34, y = 78, e = d.editors[i];
-    if (e) { const h = hashId(e.id); sprite(cx, x + 8, y - 18, HAIR[h % HAIR.length], SHIRT[(h >> 3) % SHIRT.length], t, i, e.over ? 'tired' : e.busy ? (Math.floor(t / 900 + i) % 3 ? 'talk' : 'draw') : 'sleep', col); }
+    if (e) { const h = hashId(e.id); if (!(CH.avatarUI && CH.avatarUI.office(cx, e.avatar, x + 14, y + 2, e.over ? 'tired' : e.busy ? 'draw' : 'idle', t, i))) sprite(cx, x + 8, y - 18, HAIR[h % HAIR.length], SHIRT[(h >> 3) % SHIRT.length], t, i, e.over ? 'tired' : e.busy ? (Math.floor(t / 900 + i) % 3 ? 'talk' : 'draw') : 'sleep', col); }
     desk(cx, x, y, 28);
   }
   // visitor (author consultation open) and magazine stack (∝ last sales)
@@ -12549,7 +12551,7 @@ U.drawOffice = (cx, d, col, t, floaters) => {                      // cx: 2D con
   // authors at work (max 8)
   d.authors.forEach((a, i) => {
     const x = 10 + i * 39, y = 150, h = hashId(a.id);
-    sprite(cx, x + 9, y - 18, HAIR[(h >> 2) % HAIR.length], SHIRT[(h >> 5) % SHIRT.length], t, i, a.mode, col);
+    if (!(CH.avatarUI && CH.avatarUI.office(cx, a.avatar, x + 15, y + 2, a.mode, t, i))) sprite(cx, x + 9, y - 18, HAIR[(h >> 2) % HAIR.length], SHIRT[(h >> 5) % SHIRT.length], t, i, a.mode, col);
     desk(cx, x, y, 30);
     cx.fillStyle = col.accent; cx.fillRect(x, y + 11, Math.round(30 * Math.max(0, Math.min(1, a.prog || 0))), 2);
   });
@@ -12795,6 +12797,7 @@ U.mount = (opts) => {
     let html;
     try { html = st.W ? U.render(st.W, r, ctx()) : U.renderTitle(ctx()); } catch (e) { logErr('render', e); html = '<section class="koma card prep"><b>表示エラー</b><p>' + esc(e && e.message) + '</p></section>'; }
     view.innerHTML = html;
+    if (CH.avatarArt) CH.avatarArt.refresh(view);
     view.querySelectorAll('details[data-k]').forEach((dd) => { if (open.has(dd.getAttribute('data-k'))) { fillLazy(dd); dd.open = true; } });
     for (const k of Object.keys(st.dirty)) {
       const [fid, name, val] = k.split('|'), root = $(fid); if (!root) continue;
@@ -12819,6 +12822,7 @@ U.mount = (opts) => {
     const html = U.renderModal(st.W, m, ctx());
     if (!html) { st.modal = null; modalEl.hidden = true; modalEl.innerHTML = ''; return; }
     modalEl.innerHTML = html; modalEl.hidden = false;
+    if (CH.avatarArt) CH.avatarArt.refresh(modalEl);
     const f = modalEl.querySelector('textarea:not([readonly]), .foot button:last-child, button');
     if (f && typeof f.focus === 'function') { try { f.focus({preventScroll: true}); } catch (e) { f.focus(); } }
   }
@@ -12836,6 +12840,7 @@ U.mount = (opts) => {
     const q = String(el.value || '').trim(), box = $(el.getAttribute('data-filter')); if (!box) return;
     box.querySelectorAll('[data-name]').forEach((it) => { it.hidden = !!q && it.getAttribute('data-name').indexOf(q) < 0; });
   }
+  doc.addEventListener('comic-hatten:avatar-art-ready', drawCanvas);
   // modals
   function openModal(m) { if (st.modal && m && m.kind === 'confirm') st.prevModal = st.modal; st.modal = m; renderModal(); }
   function markShown(m) { if (!m) return; if (m.id) st.shown.add(m.id); for (const k of m.cover || []) st.shown.add(k); }
@@ -13089,6 +13094,9 @@ U.mount = (opts) => {
 })(CH);
 
 </script>
+<script src="avatars/game-avatars.js"></script>
+<script src="avatars/ui.js"></script>
+<script type="module" src="avatars/render.mjs"></script>
 <script>
 (function () {
   try {
@@ -13101,3 +13109,4 @@ U.mount = (opts) => {
 })();
 </script>
 </body></html>
+
