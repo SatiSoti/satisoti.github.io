@@ -1,0 +1,740 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Comic Hatten General Character Pack",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "comic-hatten.general-character-pack"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "packId": {
+      "const": "comic-hatten-general"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "releasedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "locale": {
+      "const": "ja-JP"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "image": {
+            "type": "string",
+            "pattern": "^assets/[a-z0-9_-]+\\.png$"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "id",
+          "image",
+          "width",
+          "height",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "parts": {
+      "type": "object",
+      "properties": {
+        "hair": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "styles": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "male",
+                    "female"
+                  ]
+                },
+                "minItems": 1,
+                "maxItems": 2,
+                "uniqueItems": true
+              },
+              "assetId": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "rect": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "neck": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                ],
+                "items": false,
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "faceBox": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "renderNeckHeight": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "styles",
+              "assetId",
+              "rect",
+              "neck",
+              "faceBox",
+              "renderNeckHeight"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "face": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "styles": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "male",
+                    "female"
+                  ]
+                },
+                "minItems": 1,
+                "maxItems": 2,
+                "uniqueItems": true
+              },
+              "assetId": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "rect": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "styles",
+              "assetId",
+              "rect"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "outfit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "styles": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "male",
+                    "female"
+                  ]
+                },
+                "minItems": 1,
+                "maxItems": 2,
+                "uniqueItems": true
+              },
+              "assetId": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "assemblyFlipX": {
+                "type": "boolean"
+              },
+              "frames": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "index": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 7
+                    },
+                    "rect": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "neck": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "renderHeight": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    "offsetY": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "index",
+                    "rect",
+                    "neck",
+                    "renderHeight",
+                    "offsetY"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 8,
+                "maxItems": 8
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "styles",
+              "assetId",
+              "assemblyFlipX",
+              "frames"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "hair",
+        "face",
+        "outfit"
+      ],
+      "additionalProperties": false
+    },
+    "palettes": {
+      "type": "object",
+      "properties": {
+        "hair": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "color": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "color"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "outfit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_-]*$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "color": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "color"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "hair",
+        "outfit"
+      ],
+      "additionalProperties": false
+    },
+    "animations": {
+      "type": "object",
+      "properties": {
+        "idle": {
+          "type": "object",
+          "properties": {
+            "frames": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 7
+              },
+              "minItems": 1
+            },
+            "fps": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "loop": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "additionalProperties": false
+        },
+        "walk": {
+          "type": "object",
+          "properties": {
+            "frames": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 7
+              },
+              "minItems": 1
+            },
+            "fps": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "loop": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "additionalProperties": false
+        },
+        "work": {
+          "type": "object",
+          "properties": {
+            "frames": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 7
+              },
+              "minItems": 1
+            },
+            "fps": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "loop": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "additionalProperties": false
+        },
+        "cheer": {
+          "type": "object",
+          "properties": {
+            "frames": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 7
+              },
+              "minItems": 1
+            },
+            "fps": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "loop": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "frames",
+            "fps",
+            "loop"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "idle",
+        "walk",
+        "work",
+        "cheer"
+      ],
+      "additionalProperties": false
+    },
+    "presets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^general_[a-z0-9_-]+$",
+            "maxLength": 80
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40,
+            "pattern": "^[^\\u0000-\\u001f\\u007f]*\\S[^\\u0000-\\u001f\\u007f]*$"
+          },
+          "styleGroup": {
+            "enum": [
+              "male",
+              "female"
+            ]
+          },
+          "role": {
+            "enum": [
+              "artist",
+              "editor"
+            ]
+          },
+          "appearance": {
+            "type": "object",
+            "properties": {
+              "hairId": {
+                "enum": [
+                  "short",
+                  "bob",
+                  "ponytail",
+                  "wavy",
+                  "center",
+                  "crop",
+                  "adult_buzz",
+                  "adult_part",
+                  "mature_short",
+                  "mature_perm",
+                  "senior_sparse",
+                  "senior_bun"
+                ]
+              },
+              "faceId": {
+                "enum": [
+                  "bright",
+                  "gentle",
+                  "sharp",
+                  "smile",
+                  "adult_calm",
+                  "adult_bold",
+                  "mature_moustache",
+                  "mature_soft",
+                  "senior_kind",
+                  "senior_glasses"
+                ]
+              },
+              "outfitId": {
+                "enum": [
+                  "casual",
+                  "jacket",
+                  "apron",
+                  "women_casual",
+                  "women_jacket",
+                  "women_apron"
+                ]
+              },
+              "hairColorId": {
+                "enum": [
+                  "dark",
+                  "brown",
+                  "copper",
+                  "silver"
+                ]
+              },
+              "outfitColorId": {
+                "enum": [
+                  "sage",
+                  "coral",
+                  "indigo",
+                  "mustard",
+                  "plum",
+                  "teal"
+                ]
+              }
+            },
+            "required": [
+              "hairId",
+              "faceId",
+              "outfitId",
+              "hairColorId",
+              "outfitColorId"
+            ],
+            "additionalProperties": false
+          },
+          "gameplay": {
+            "type": "object",
+            "properties": {
+              "stats": {
+                "type": "null"
+              },
+              "unlockConditions": {
+                "type": "null"
+              },
+              "recruitmentCost": {
+                "type": "null"
+              },
+              "implementationStatus": {
+                "const": "not_integrated"
+              }
+            },
+            "required": [
+              "stats",
+              "unlockConditions",
+              "recruitmentCost",
+              "implementationStatus"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "styleGroup",
+          "role",
+          "appearance",
+          "gameplay"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "rendering": {
+      "type": "object",
+      "properties": {
+        "defaultDirection": {
+          "const": "front-right"
+        },
+        "supportsHorizontalFlip": {
+          "const": true
+        },
+        "feetAnchor": {
+          "const": true
+        },
+        "logicalHeight": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "coloring": {
+          "const": "sentinel-mask"
+        },
+        "faceFeatures": {
+          "const": "bundled-eyes-nose-mouth"
+        }
+      },
+      "required": [
+        "defaultDirection",
+        "supportsHorizontalFlip",
+        "feetAnchor",
+        "logicalHeight",
+        "coloring",
+        "faceFeatures"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "format",
+    "schemaVersion",
+    "packId",
+    "version",
+    "releasedAt",
+    "locale",
+    "title",
+    "assets",
+    "parts",
+    "palettes",
+    "animations",
+    "presets",
+    "rendering"
+  ],
+  "additionalProperties": false
+}

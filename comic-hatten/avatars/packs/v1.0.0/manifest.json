@@ -1,0 +1,1259 @@
+{
+  "format": "comic-hatten.character-pack",
+  "schemaVersion": "1.0.0",
+  "packId": "comic-hatten-specialists",
+  "version": "1.0.0",
+  "releasedAt": "2026-10-12",
+  "locale": "ja-JP",
+  "title": "コミック発展国・固定キャラクター素材集",
+  "characters": [
+    {
+      "id": "sumitani",
+      "name": "墨谷 玄舟",
+      "nameReading": "すみたに げんしゅう",
+      "role": "artist",
+      "roleLabel": "漫画家",
+      "epithet": "墨の巨匠",
+      "profile": "銀髪と藍色の羽織が目印。重厚な時代劇と、筆の勢いで魅せる大御所。",
+      "specialties": [
+        "時代劇",
+        "アクション"
+      ],
+      "personality": [
+        "職人気質",
+        "面倒見がよい"
+      ],
+      "design": {
+        "fixed": true,
+        "signatureColor": "#6f7598",
+        "markers": [
+          "銀髪のひとつ結び",
+          "藍色の羽織と黄土色の襟巻き",
+          "腰に差した筆入れ"
+        ],
+        "notes": "落ち着いた藍と銀を基調に、広がる袖で巨匠らしい輪郭をつくる。"
+      },
+      "production": {
+        "status": "ready",
+        "revision": 1
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "sprite": {
+        "image": "assets/sumitani.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "4c9f2294b85927a767b990ffeb5224d06a414c5c5524a89cdae8ee4e5847f844",
+        "grid": {
+          "columns": 4,
+          "rows": 2,
+          "cellWidth": 384,
+          "cellHeight": 512
+        },
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              37,
+              7,
+              290,
+              499
+            ],
+            "anchor": [
+              153.0,
+              499
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              431,
+              8,
+              300,
+              495
+            ],
+            "anchor": [
+              150.0,
+              495
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              804,
+              7,
+              301,
+              492
+            ],
+            "anchor": [
+              141.5,
+              492
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1195,
+              8,
+              300,
+              498
+            ],
+            "anchor": [
+              162.5,
+              498
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              21,
+              518,
+              301,
+              485
+            ],
+            "anchor": [
+              145.5,
+              485
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              420,
+              542,
+              309,
+              443
+            ],
+            "anchor": [
+              150.5,
+              443
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              804,
+              542,
+              312,
+              441
+            ],
+            "anchor": [
+              146.5,
+              441
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1183,
+              534,
+              339,
+              452
+            ],
+            "anchor": [
+              187.0,
+              452
+            ],
+            "renderHeight": 60,
+            "offsetY": -2
+          }
+        ],
+        "animations": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "fps": 1,
+            "loop": true
+          },
+          "walk": {
+            "frames": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "fps": 6,
+            "loop": true
+          },
+          "work": {
+            "frames": [
+              5,
+              6
+            ],
+            "fps": 2.7,
+            "loop": true
+          },
+          "cheer": {
+            "frames": [
+              0,
+              7
+            ],
+            "fps": 2.3,
+            "loop": true
+          }
+        },
+        "defaultDirection": "front-right",
+        "supportsHorizontalFlip": true
+      }
+    },
+    {
+      "id": "hanamori",
+      "name": "花守 リリカ",
+      "nameReading": "はなもり りりか",
+      "role": "artist",
+      "roleLabel": "漫画家",
+      "epithet": "ときめきの名手",
+      "profile": "星のベレー帽と柔らかな巻き髪。人物の感情を繊細に描く、恋愛・幻想漫画の名手。",
+      "specialties": [
+        "恋愛",
+        "ファンタジー"
+      ],
+      "personality": [
+        "感受性が豊か",
+        "表現にこだわる"
+      ],
+      "design": {
+        "fixed": true,
+        "signatureColor": "#ab677c",
+        "markers": [
+          "星飾りのベレー帽",
+          "栗色の巻き髪",
+          "プラム色の羽織とセージ色のスカート"
+        ],
+        "notes": "丸いベレー帽と揺れるスカートで、柔らかさと華やかさを表現する。"
+      },
+      "production": {
+        "status": "ready",
+        "revision": 1
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "sprite": {
+        "image": "assets/hanamori.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "6738f330ad74d9e8b39ebfe0c759c9b44016e6ecc48aa19dcbd9b068b8d34f91",
+        "grid": {
+          "columns": 4,
+          "rows": 2,
+          "cellWidth": 384,
+          "cellHeight": 512
+        },
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              50,
+              12,
+              277,
+              497
+            ],
+            "anchor": [
+              140.5,
+              497
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              435,
+              11,
+              276,
+              495
+            ],
+            "anchor": [
+              149.5,
+              495
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              820,
+              13,
+              278,
+              495
+            ],
+            "anchor": [
+              127.0,
+              495
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1205,
+              13,
+              275,
+              495
+            ],
+            "anchor": [
+              150.5,
+              495
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              47,
+              524,
+              276,
+              489
+            ],
+            "anchor": [
+              161.5,
+              489
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              437,
+              528,
+              275,
+              485
+            ],
+            "anchor": [
+              166.0,
+              485
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              821,
+              528,
+              273,
+              485
+            ],
+            "anchor": [
+              169.0,
+              485
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1209,
+              525,
+              281,
+              486
+            ],
+            "anchor": [
+              165.0,
+              486
+            ],
+            "renderHeight": 60,
+            "offsetY": -2
+          }
+        ],
+        "animations": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "fps": 1,
+            "loop": true
+          },
+          "walk": {
+            "frames": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "fps": 6,
+            "loop": true
+          },
+          "work": {
+            "frames": [
+              5,
+              6
+            ],
+            "fps": 2.7,
+            "loop": true
+          },
+          "cheer": {
+            "frames": [
+              0,
+              7
+            ],
+            "fps": 2.3,
+            "loop": true
+          }
+        },
+        "defaultDirection": "front-right",
+        "supportsHorizontalFlip": true
+      }
+    },
+    {
+      "id": "hoshino",
+      "name": "星乃 トオル",
+      "nameReading": "ほしの とおる",
+      "role": "artist",
+      "roleLabel": "漫画家",
+      "epithet": "構成の奇才",
+      "profile": "白い前髪とゴーグル、青緑のマフラー。緻密な伏線で読者を驚かせるSF・ミステリー作家。",
+      "specialties": [
+        "SF",
+        "ミステリー"
+      ],
+      "personality": [
+        "好奇心旺盛",
+        "構成を練り込む"
+      ],
+      "design": {
+        "fixed": true,
+        "signatureColor": "#c39445",
+        "markers": [
+          "白いひと房の前髪",
+          "頭に乗せたゴーグル",
+          "黄土色の上着と青緑のマフラー"
+        ],
+        "notes": "逆立つ髪と長いマフラーで、他の人物と違う軽快な輪郭をつくる。"
+      },
+      "production": {
+        "status": "ready",
+        "revision": 1
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "sprite": {
+        "image": "assets/hoshino.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "6d9b95f674095d2ce87d37576b8eee1d103d6357930e2b71941832934d0804b4",
+        "grid": {
+          "columns": 4,
+          "rows": 2,
+          "cellWidth": 384,
+          "cellHeight": 512
+        },
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              47,
+              22,
+              284,
+              475
+            ],
+            "anchor": [
+              151.0,
+              475
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              433,
+              24,
+              297,
+              473
+            ],
+            "anchor": [
+              167.0,
+              473
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              812,
+              23,
+              300,
+              472
+            ],
+            "anchor": [
+              150.0,
+              472
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1197,
+              23,
+              301,
+              473
+            ],
+            "anchor": [
+              174.5,
+              473
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              52,
+              533,
+              303,
+              465
+            ],
+            "anchor": [
+              157.0,
+              465
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              433,
+              538,
+              301,
+              460
+            ],
+            "anchor": [
+              230.5,
+              460
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              812,
+              540,
+              308,
+              462
+            ],
+            "anchor": [
+              231.0,
+              462
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1197,
+              529,
+              316,
+              471
+            ],
+            "anchor": [
+              234.0,
+              471
+            ],
+            "renderHeight": 60,
+            "offsetY": -2
+          }
+        ],
+        "animations": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "fps": 1,
+            "loop": true
+          },
+          "walk": {
+            "frames": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "fps": 6,
+            "loop": true
+          },
+          "work": {
+            "frames": [
+              5,
+              6
+            ],
+            "fps": 2.7,
+            "loop": true
+          },
+          "cheer": {
+            "frames": [
+              0,
+              7
+            ],
+            "fps": 2.3,
+            "loop": true
+          }
+        },
+        "defaultDirection": "front-right",
+        "supportsHorizontalFlip": true
+      }
+    },
+    {
+      "id": "takamine",
+      "name": "鷹峰 律子",
+      "nameReading": "たかみね りつこ",
+      "role": "editor",
+      "roleLabel": "編集者",
+      "epithet": "赤ペンの司令塔",
+      "profile": "赤い眼鏡とワイン色のジャケット。作品の核を見抜き、連載の方向を決める編集長。",
+      "specialties": [
+        "企画の見極め",
+        "連載方針"
+      ],
+      "personality": [
+        "決断が早い",
+        "率直に伝える"
+      ],
+      "design": {
+        "fixed": true,
+        "signatureColor": "#a34b5d",
+        "markers": [
+          "赤い四角い眼鏡",
+          "黒いボブとワイン色のジャケット",
+          "原稿を挟んだボードと赤ペン"
+        ],
+        "notes": "赤と黒の引き締まった配色、直線的な衣装で判断力を感じさせる。"
+      },
+      "production": {
+        "status": "ready",
+        "revision": 1
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "sprite": {
+        "image": "assets/takamine.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "34da7e20a6217fc4603dd53e5057e01b5f850ce0814031c9a98d060a4823733d",
+        "grid": {
+          "columns": 4,
+          "rows": 2,
+          "cellWidth": 384,
+          "cellHeight": 512
+        },
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              56,
+              11,
+              243,
+              488
+            ],
+            "anchor": [
+              136.0,
+              488
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              430,
+              11,
+              252,
+              485
+            ],
+            "anchor": [
+              149.0,
+              485
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              831,
+              15,
+              252,
+              479
+            ],
+            "anchor": [
+              136.0,
+              479
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1211,
+              15,
+              254,
+              481
+            ],
+            "anchor": [
+              160.5,
+              481
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              54,
+              524,
+              253,
+              483
+            ],
+            "anchor": [
+              148.0,
+              483
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              435,
+              524,
+              251,
+              483
+            ],
+            "anchor": [
+              180.0,
+              483
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              830,
+              524,
+              263,
+              482
+            ],
+            "anchor": [
+              185.0,
+              482
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1215,
+              522,
+              288,
+              484
+            ],
+            "anchor": [
+              200.5,
+              484
+            ],
+            "renderHeight": 60,
+            "offsetY": -2
+          }
+        ],
+        "animations": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "fps": 1,
+            "loop": true
+          },
+          "walk": {
+            "frames": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "fps": 6,
+            "loop": true
+          },
+          "work": {
+            "frames": [
+              5,
+              6
+            ],
+            "fps": 2.7,
+            "loop": true
+          },
+          "cheer": {
+            "frames": [
+              0,
+              7
+            ],
+            "fps": 2.3,
+            "loop": true
+          }
+        },
+        "defaultDirection": "front-right",
+        "supportsHorizontalFlip": true
+      }
+    },
+    {
+      "id": "nukui",
+      "name": "温井 誠",
+      "nameReading": "ぬくい まこと",
+      "role": "editor",
+      "roleLabel": "編集者",
+      "epithet": "育成の達人",
+      "profile": "丸眼鏡と蝶ネクタイ、落ち着いたベスト。じっくり話を聞き、新人の持ち味を育てる伴走役。",
+      "specialties": [
+        "新人育成",
+        "作家との対話"
+      ],
+      "personality": [
+        "聞き上手",
+        "粘り強い"
+      ],
+      "design": {
+        "fixed": true,
+        "signatureColor": "#76876b",
+        "markers": [
+          "丸眼鏡と白い口ひげ",
+          "黄土色の蝶ネクタイ",
+          "緑のセーターと茶色のベスト"
+        ],
+        "notes": "丸みのある体形と穏やかな緑・茶の配色で、安心して相談できる印象にする。"
+      },
+      "production": {
+        "status": "ready",
+        "revision": 1
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "sprite": {
+        "image": "assets/nukui.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "fb152f47a3dcc3ac17505378139d4f79ae47d6e51badaf0a6b72465123a5cb33",
+        "grid": {
+          "columns": 4,
+          "rows": 2,
+          "cellWidth": 384,
+          "cellHeight": 512
+        },
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              66,
+              23,
+              255,
+              473
+            ],
+            "anchor": [
+              139.0,
+              473
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              436,
+              26,
+              304,
+              473
+            ],
+            "anchor": [
+              164.5,
+              473
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              840,
+              25,
+              255,
+              474
+            ],
+            "anchor": [
+              129.0,
+              474
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1215,
+              25,
+              292,
+              474
+            ],
+            "anchor": [
+              163.5,
+              474
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              69,
+              527,
+              256,
+              467
+            ],
+            "anchor": [
+              134.0,
+              467
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              434,
+              534,
+              296,
+              463
+            ],
+            "anchor": [
+              205.5,
+              463
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              817,
+              534,
+              297,
+              461
+            ],
+            "anchor": [
+              193.0,
+              461
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1201,
+              531,
+              309,
+              462
+            ],
+            "anchor": [
+              211.0,
+              462
+            ],
+            "renderHeight": 60,
+            "offsetY": -2
+          }
+        ],
+        "animations": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "fps": 1,
+            "loop": true
+          },
+          "walk": {
+            "frames": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "fps": 6,
+            "loop": true
+          },
+          "work": {
+            "frames": [
+              5,
+              6
+            ],
+            "fps": 2.7,
+            "loop": true
+          },
+          "cheer": {
+            "frames": [
+              0,
+              7
+            ],
+            "fps": 2.3,
+            "loop": true
+          }
+        },
+        "defaultDirection": "front-right",
+        "supportsHorizontalFlip": true
+      }
+    },
+    {
+      "id": "kazama",
+      "name": "風間 晴",
+      "nameReading": "かざま はる",
+      "role": "editor",
+      "roleLabel": "編集者",
+      "epithet": "ヒットの発掘屋",
+      "profile": "青緑のブルゾンと黄色い肩掛けバッグ。赤い手帳を片手に、新しい才能を探す行動派。",
+      "specialties": [
+        "新人発掘",
+        "取材・情報収集"
+      ],
+      "personality": [
+        "行動が早い",
+        "人懐っこい"
+      ],
+      "design": {
+        "fixed": true,
+        "signatureColor": "#428b88",
+        "markers": [
+          "短い栗色の髪と赤いヘアバンド",
+          "青緑のブルゾン",
+          "黄色い肩掛けバッグと赤い手帳"
+        ],
+        "notes": "バッグを下げた非対称の輪郭と動きやすい服装で、外へ飛び出す編集者を表現する。"
+      },
+      "production": {
+        "status": "ready",
+        "revision": 1
+      },
+      "gameplay": {
+        "stats": null,
+        "unlockConditions": null,
+        "recruitmentCost": null,
+        "implementationStatus": "not_integrated"
+      },
+      "sprite": {
+        "image": "assets/kazama.png",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "d1d71fbea7cfae9183addde7f5bf7c1c90b4b6dd8672e474f54ad516d481e90c",
+        "grid": {
+          "columns": 4,
+          "rows": 2,
+          "cellWidth": 384,
+          "cellHeight": 512
+        },
+        "frames": [
+          {
+            "index": 0,
+            "rect": [
+              67,
+              15,
+              241,
+              483
+            ],
+            "anchor": [
+              129.0,
+              483
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 1,
+            "rect": [
+              449,
+              15,
+              257,
+              480
+            ],
+            "anchor": [
+              150.0,
+              480
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 2,
+            "rect": [
+              842,
+              15,
+              242,
+              479
+            ],
+            "anchor": [
+              128.0,
+              479
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 3,
+            "rect": [
+              1229,
+              15,
+              245,
+              480
+            ],
+            "anchor": [
+              142.0,
+              480
+            ],
+            "renderHeight": 58,
+            "offsetY": 0
+          },
+          {
+            "index": 4,
+            "rect": [
+              76,
+              528,
+              247,
+              467
+            ],
+            "anchor": [
+              124.0,
+              467
+            ],
+            "renderHeight": 58,
+            "offsetY": -1
+          },
+          {
+            "index": 5,
+            "rect": [
+              464,
+              532,
+              253,
+              463
+            ],
+            "anchor": [
+              188.0,
+              463
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 6,
+            "rect": [
+              842,
+              532,
+              242,
+              463
+            ],
+            "anchor": [
+              165.0,
+              463
+            ],
+            "renderHeight": 51,
+            "offsetY": 0
+          },
+          {
+            "index": 7,
+            "rect": [
+              1204,
+              532,
+              298,
+              463
+            ],
+            "anchor": [
+              199.0,
+              463
+            ],
+            "renderHeight": 60,
+            "offsetY": -2
+          }
+        ],
+        "animations": {
+          "idle": {
+            "frames": [
+              0
+            ],
+            "fps": 1,
+            "loop": true
+          },
+          "walk": {
+            "frames": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "fps": 6,
+            "loop": true
+          },
+          "work": {
+            "frames": [
+              5,
+              6
+            ],
+            "fps": 2.7,
+            "loop": true
+          },
+          "cheer": {
+            "frames": [
+              0,
+              7
+            ],
+            "fps": 2.3,
+            "loop": true
+          }
+        },
+        "defaultDirection": "front-right",
+        "supportsHorizontalFlip": true
+      }
+    }
+  ]
+}
